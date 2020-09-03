@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(244, 244, 244, 0.5);
+}
+h1,
+h2,
+h2{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding:40px;
+    text-align: center;
+}
+header h1 a{
+    text-decoration: none;
+    color:#222;
+}
+.wrapper{
+    width:80%;
+    margin:0 auto;
+}
+section{
+    margin-bottom: 40px;
+    padding:10px 40px;
+    text-align: center;
+    border-radius:5px;
+    box-shadow: 8px 0.5px 5px 1px rgba(0, 0, 0, 0.09);
+    animation-name: animate;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+section div h3 {
+    padding:10px 20px;
+}
+section div p{
+    padding:10px;
+    font-weight:400;
+}
+section div p span img{
+    width:12px;
+    margin: 0 5px;
+    transform: rotate(180deg);
+}
+section div .btn {
+    margin: 20px 0 ;
+}
+section div a{
+    color:#111;
+    display:inline-block;
+    border:1px solid #111;
+    padding:5px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 0.5px 0.5px 3px 1px rgba(0, 0, 0, 0.05);
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    cursor:pointer;
+    opacity:0.5;
+}
+section div a:hover{
+    opacity:1;
+    color:#111;
+}
+section div .hidden {
+    display:none;
+    padding: 20px 0;
+
+}
+section .showmore{
+    color:#555;
+    cursor: pointer;
+}
+section .hidden .btn a{
+    font-size:12px;
+    padding:5px 15px;
+    border:#333 1px solid;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+section .hidden .btn a:hover{
+    color:#222;
+    opacity:0.4;
+
+}
+section div .show{
+    display: block;
+    animation-name: showcase;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+.rotate{
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.new {
+    text-align: center;
+}
+form{
+    width:80%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+}
+form div{
+    padding:10px;
+}
+form div input{
+    display:block;
+    margin: 10px 2px;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    outline: none;
+    font-weight:600;
+}
+form div select {
+    margin: 10px 2px;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    outline: none;
+    font-weight:600;
+}
+
+form div button{
+    padding:10px 20px;
+    font-weight:600;
+    border-radius: 5px;
+    color:#111;
+    border:none;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+form div button:hover {
+    color:#333;
+    opacity:0.5;
+}
+@keyframes showcase{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+        transform: scale(1.2);
+        opacity:0.5
+    }
+    100%{
+        transform: rotate(2deg);
+        opacity: 1;
+    }
+}
+
+@media (min-width:700px){
+    .wrapper{
+        width:50%;
+    }
+    section{
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.05);
+    }
+}
+
